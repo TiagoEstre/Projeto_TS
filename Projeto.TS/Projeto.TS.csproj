@@ -82,6 +82,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="views\definition.resx">
+      <DependentUpon>definition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\Interface.resx">
       <DependentUpon>Interface.cs</DependentUpon>
     </EmbeddedResource>
