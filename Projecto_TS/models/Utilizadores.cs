@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projecto_TS.models
 {
-    internal class Utilizadores
+    public class Utilizadores
     {
         public string Name {  get; set; }
         public string Username { get; set; }
