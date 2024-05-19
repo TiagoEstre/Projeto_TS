@@ -21,6 +21,3 @@ C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\P
 C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.csproj.CoreCompileInputs.cache
 C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.exe
 C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.pdb
-C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\bin\Debug\Projecto_TS.exe.config
-C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\bin\Debug\Projecto_TS.exe
-C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\bin\Debug\Projecto_TS.pdb
