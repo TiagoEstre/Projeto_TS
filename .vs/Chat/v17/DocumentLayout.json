@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tiago\\OneDrive - IPLeiria\\Desktop\\Projetos\\TS - Topicos de Seguran\u00E7a\\Projeto_TS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD90B40-8093-47E0-B1A7-571762A5F48F}|Projecto_TS\\Projecto_TS.csproj|c:\\users\\tiago\\onedrive - ipleiria\\desktop\\projetos\\ts - topicos de seguran\u00E7a\\projeto_ts\\projecto_ts\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DFD90B40-8093-47E0-B1A7-571762A5F48F}|Projecto_TS\\Projecto_TS.csproj|solutionrelative:projecto_ts\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tiago\\OneDrive - IPLeiria\\Desktop\\Projetos\\TS - Topicos de Seguran\u00E7a\\Projeto_TS\\Projecto_TS\\Login.cs",
+              "RelativeDocumentMoniker": "Projecto_TS\\Login.cs",
+              "ToolTip": "C:\\Users\\tiago\\OneDrive - IPLeiria\\Desktop\\Projetos\\TS - Topicos de Seguran\u00E7a\\Projeto_TS\\Projecto_TS\\Login.cs [Design]",
+              "RelativeToolTip": "Projecto_TS\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T13:24:23.447Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

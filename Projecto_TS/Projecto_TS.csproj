@@ -61,10 +61,10 @@
     <Compile Include="views\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\Login.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Login.Designer.cs">
+    <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="views\Register.cs">
@@ -88,7 +88,7 @@
     <EmbeddedResource Include="views\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Login.resx">
+    <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\Register.resx">

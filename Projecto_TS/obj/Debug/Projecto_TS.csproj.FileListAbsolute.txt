@@ -11,3 +11,13 @@ C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\Cha
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\Chat\Projecto_TS\obj\Debug\Projecto_TS.views.HomePage.resources
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\Chat\Projecto_TS\obj\Debug\Projecto_TS.views.Definition.resources
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\Chat\Projecto_TS\obj\Debug\Projecto_TS.views.Register.resources
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.csproj.AssemblyReference.cache
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.Properties.Resources.resources
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.views.Definition.resources
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.views.HomePage.resources
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.views.Login.resources
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.views.Register.resources
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.csproj.GenerateResource.cache
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.csproj.CoreCompileInputs.cache
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.exe
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.pdb
