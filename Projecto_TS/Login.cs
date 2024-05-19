@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Projecto_TS.views
 {
-    public List<Utilizadores> utilizadores;
+    
     public partial class Login : Form
     {
         public Login()
@@ -40,6 +40,7 @@ namespace Projecto_TS.views
         {
             Close();
         }
+
 
         private void Closed_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -85,5 +86,8 @@ namespace Projecto_TS.views
             register.FormClosed += Closed_FormClosed;
             register.ShowDialog();
         }        
+        
+
+
     }
 }

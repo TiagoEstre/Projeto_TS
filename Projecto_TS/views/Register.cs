@@ -16,6 +16,28 @@ namespace Projecto_TS.views
         {
             InitializeComponent();
         }
+        private void buttonMaxime_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.TopMost = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.TopMost = false;
+            }
+        }
+        private void buttonMinimed_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void buttonClosed_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
 
         private void buttonrRegister_Click(object sender, EventArgs e)
         {

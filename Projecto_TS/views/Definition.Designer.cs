@@ -1,6 +1,6 @@
 ﻿namespace Projecto_TS.views
 {
-    partial class buttonVoltar
+    partial class Definition
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(buttonVoltar));
             this.buttonTemas = new System.Windows.Forms.Button();
             this.buttonNotificacoes = new System.Windows.Forms.Button();
             this.buttonContas = new System.Windows.Forms.Button();
@@ -73,7 +72,6 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Voltar";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox1
             // 
@@ -97,7 +95,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
@@ -107,7 +104,6 @@
             this.Name = "buttonVoltar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Definitions";
-            this.Load += new System.EventHandler(this.Definition_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
