@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Projecto_TS.views
 {
-    public List<Utilizadores> utilizadores;
+    
     public partial class Login : Form
     {
         public Login()
@@ -40,6 +40,38 @@ namespace Projecto_TS.views
         {
             Close();
         }
+
+
+        private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Simula o clique do button
+                ButtonLogin.PerformClick();
+
+                // Indica que o evento foi tratado
+                e.Handled = true;
+
+                // Previne que a tecla 'Enter' seja processada pelo controle
+                e.SuppressKeyPress = true;
+            }
+        }
+        private void textBoxUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Simula o clique do button
+                ButtonLogin.PerformClick();
+
+                // Indica que o evento foi tratado
+                e.Handled = true;
+
+                // Previne que a tecla 'Enter' seja processada pelo controle
+                e.SuppressKeyPress = true;
+            }
+
+        }
+
 
         private void Closed_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -84,6 +116,8 @@ namespace Projecto_TS.views
             Hide();
             register.FormClosed += Closed_FormClosed;
             register.ShowDialog();
-        }        
+        }
+
+        
     }
 }

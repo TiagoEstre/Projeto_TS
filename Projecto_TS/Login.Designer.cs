@@ -64,6 +64,7 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(498, 26);
             this.textBoxUsername.TabIndex = 1;
+            this.textBoxUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxUsername_KeyDown);
             // 
             // textBoxPassword
             // 
@@ -74,6 +75,7 @@
             this.textBoxPassword.TabIndex = 2;
             this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBoxPassword.UseSystemPasswordChar = true;
+            this.textBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPassword_KeyDown);
             // 
             // label2
             // 
