@@ -77,36 +77,42 @@ namespace Projecto_TS.views
         {
             Show();
         }
+
+
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;
 
-            if (username == "Tiago" && password == "1234")
+            if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                HomePage homepage = new HomePage();
+                labelErro.Visible = true;
+                labelErro.Text = "Todos os campos são de preenchimento obrigatório";
+                return;
+            }
 
-                Hide();
-                homepage.FormClosed += Closed_FormClosed;
-                homepage.ShowDialog();
-            }
-            else if (username == "" && password == "")
+            using(var db = new ChatContext())
             {
-                labelErro.Text = "Insira credênciais";
-                labelErro.Visible = true;
-                labelErro.ForeColor = Color.Yellow;
-            }
-            else if (username != "Tiago")
-            {
-                labelErro.Text = "Utilizador não tem conta";
-                labelErro.Visible = true;
-                labelErro.ForeColor = Color.Yellow;
-            }
-            else if (username == "Tiago" && password != "1234")
-            {
-                labelErro.Text = "Utilizador ou Palavra-Passe incorreto!";
-                labelErro.Visible = true;
-                labelErro.ForeColor = Color.Yellow;
+                var utilizador = db.utilizadors.FirstOrDefault(u => u.Username == username);
+                var email = db.utilizadors.FirstOrDefault(e => e.Email == username);
+
+                if(utilizador != null || email != null && utilizador.Password == password)
+                {
+                    labelErro.Visible = true;
+                    labelErro.Text = "Login bem-sucedido ! Bem-Vindo, " + utilizador.Name;
+
+                    HomePage homepage = new HomePage();
+
+                    Hide();
+                    homepage.FormClosed += Closed_FormClosed;
+                    homepage.ShowDialog();
+
+                }
+                else
+                {
+                    labelErro.Visible = true;
+                    labelErro.Text = "Username ou Password incorretos.";
+                }
             }
         }
         private void buttonrRegister_Click(object sender, EventArgs e)

@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
+using Projecto_TS.models;
 
 namespace Projecto_TS.views
 {
     public partial class HomePage : Form
     {
-        public HomePage()
+        public HomePage(DbContext dbContext)
         {
             InitializeComponent();
         }
 
+        
         private void pictureBoxDefinition_Click(object sender, EventArgs e)
         {
             Definition definition = new Definition();
