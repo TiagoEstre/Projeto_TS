@@ -77,7 +77,7 @@ namespace Projecto_TS.views
                 {
                     Username = User,
                     Email = Email,
-                    Numero = Phone,
+                    Phone = Phone,
                     Name = Username,
                     Password = Password,
                 };

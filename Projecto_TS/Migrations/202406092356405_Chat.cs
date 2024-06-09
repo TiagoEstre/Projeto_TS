@@ -16,8 +16,9 @@
                         Username = c.String(),
                         Password = c.String(),
                         Email = c.String(),
-                        Numero = c.String(),
-                        Idade = c.String(),
+                        Phone = c.String(),
+                        Year = c.String(),
+                        Description = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             

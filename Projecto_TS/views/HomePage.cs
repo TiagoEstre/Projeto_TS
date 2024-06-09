@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using Projecto_TS.models;
 using Projecto_TS.controller;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Projecto_TS.views
 {
@@ -34,6 +35,44 @@ namespace Projecto_TS.views
             string mesage = textBoxMesagem.Text;
 
             listBoxMessager.Text = mesage;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string searchQuery = textBoxSearch.Text.Trim();
+
+            if(string.IsNullOrEmpty(searchQuery) )
+            {
+                textBoxSearch.Text = "Por favor, insira um nome para pesquisar.";
+                return;
+            }
+
+            using (var db = new ChatContext())
+            {
+                var results = db.utilizadors
+                    .Where(u => u.Name.Contains(searchQuery))
+                    .Select(u => new {u.Name, u.Username})
+                    .ToList();
+
+                listBoxSearch.Items.Clear();
+
+                foreach (var result in results)
+                {
+                    listBoxSearch.Items.Add($"{result.Name} ({result.Username})");
+                    listBoxSearch.Visible = true;
+                }
+
+                if(results.Count == 0)
+                {
+                    listBoxSearch.Visible = true;
+                    listBoxSearch.Items.Add("Nenhum resultado encontrado.");
+                }
+            }
+        }
+
+        private void listBoxSearch_DoubleClick(object sender, EventArgs e)
+        {
+            
         }
     }
 }

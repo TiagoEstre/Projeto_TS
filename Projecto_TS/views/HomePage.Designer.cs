@@ -34,7 +34,7 @@
             this.labelUsername = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,7 @@
             this.buttonSend = new System.Windows.Forms.Button();
             this.textBoxMesagem = new System.Windows.Forms.TextBox();
             this.listBoxMessager = new System.Windows.Forms.ListBox();
+            this.listBoxSearch = new System.Windows.Forms.ListBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
@@ -109,7 +110,7 @@
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(58, 32);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(88, 95);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,7 +120,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxSearch);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -129,24 +130,25 @@
             this.panel1.Size = new System.Drawing.Size(688, 32);
             this.panel1.TabIndex = 4;
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 5);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 22);
-            this.textBox1.TabIndex = 12;
+            this.textBoxSearch.Location = new System.Drawing.Point(10, 5);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSearch.Multiline = true;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(176, 22);
+            this.textBoxSearch.TabIndex = 12;
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(190, 5);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(56, 23);
             this.button3.TabIndex = 11;
             this.button3.Text = "SEARCH";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // labelName
             // 
@@ -182,7 +184,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(56, 630);
             this.flowLayoutPanel1.TabIndex = 5;
@@ -227,6 +229,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(47)))));
+            this.panel3.Controls.Add(this.listBoxSearch);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(56, 32);
@@ -243,7 +246,7 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Location = new System.Drawing.Point(10, 13);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(224, 72);
             this.panel5.TabIndex = 1;
@@ -258,7 +261,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(196, 41);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(19, 20);
             this.button1.TabIndex = 6;
@@ -328,7 +331,7 @@
             // buttonSend
             // 
             this.buttonSend.Location = new System.Drawing.Point(384, 12);
-            this.buttonSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSend.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(42, 20);
             this.buttonSend.TabIndex = 9;
@@ -339,7 +342,7 @@
             // textBoxMesagem
             // 
             this.textBoxMesagem.Location = new System.Drawing.Point(16, 12);
-            this.textBoxMesagem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMesagem.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMesagem.Multiline = true;
             this.textBoxMesagem.Name = "textBoxMesagem";
             this.textBoxMesagem.Size = new System.Drawing.Size(357, 20);
@@ -350,10 +353,20 @@
             // 
             this.listBoxMessager.FormattingEnabled = true;
             this.listBoxMessager.Location = new System.Drawing.Point(317, 37);
-            this.listBoxMessager.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxMessager.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxMessager.Name = "listBoxMessager";
             this.listBoxMessager.Size = new System.Drawing.Size(410, 537);
             this.listBoxMessager.TabIndex = 8;
+            // 
+            // listBoxSearch
+            // 
+            this.listBoxSearch.FormattingEnabled = true;
+            this.listBoxSearch.Location = new System.Drawing.Point(10, -3);
+            this.listBoxSearch.Name = "listBoxSearch";
+            this.listBoxSearch.Size = new System.Drawing.Size(176, 134);
+            this.listBoxSearch.TabIndex = 2;
+            this.listBoxSearch.Visible = false;
+            this.listBoxSearch.DoubleClick += new System.EventHandler(this.listBoxSearch_DoubleClick);
             // 
             // HomePage
             // 
@@ -368,7 +381,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
@@ -399,7 +412,7 @@
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -418,5 +431,6 @@
         private System.Windows.Forms.Button buttonSend;
         private System.Windows.Forms.TextBox textBoxMesagem;
         private System.Windows.Forms.ListBox listBoxMessager;
+        private System.Windows.Forms.ListBox listBoxSearch;
     }
 }
