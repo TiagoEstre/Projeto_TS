@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatContext.cs" />
+    <Compile Include="controller\sessionManager.cs" />
     <Compile Include="Migrations\202406091357057_Chat.cs" />
     <Compile Include="Migrations\202406091357057_Chat.Designer.cs">
       <DependentUpon>202406091357057_Chat.cs</DependentUpon>
@@ -133,9 +134,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

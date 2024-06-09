@@ -9,14 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
 using Projecto_TS.models;
+using Projecto_TS.controller;
 
 namespace Projecto_TS.views
 {
     public partial class HomePage : Form
     {
-        public HomePage(DbContext dbContext)
+        public HomePage()
         {
             InitializeComponent();
+            labelUsername.Text = sessionManager.CurrentUser.Name;
         }
 
         

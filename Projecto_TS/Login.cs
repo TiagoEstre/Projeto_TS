@@ -1,4 +1,5 @@
-﻿using Projecto_TS.models;
+﻿using Projecto_TS.controller;
+using Projecto_TS.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace Projecto_TS.views
             InitializeComponent();
         }
 
+        // buttons de fecha / minimizar / maxmizar janela
         private void buttonMaxime_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
@@ -42,6 +44,7 @@ namespace Projecto_TS.views
         }
 
 
+        // Funçoes que premitem entrar ao clicar no 'Enter'
         private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -73,17 +76,20 @@ namespace Projecto_TS.views
         }
 
 
+        // função para fechar o form
         private void Closed_FormClosed(object sender, FormClosedEventArgs e)
         {
             Show();
         }
 
 
+        // button de login
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;
 
+            // Verifica se os campos todos estão preenchidos
             if(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 labelErro.Visible = true;
@@ -91,21 +97,26 @@ namespace Projecto_TS.views
                 return;
             }
 
+            // Premite usar a Base de Dados 'ChatContext'
             using(var db = new ChatContext())
             {
-                var utilizador = db.utilizadors.FirstOrDefault(u => u.Username == username);
-                var email = db.utilizadors.FirstOrDefault(e => e.Email == username);
+                // vai buscar o Username na base de dados e vê se igual ao username da textBox
+                var utilizador = db.utilizadors.FirstOrDefault(u => u.Username == username || u.Email == username);
 
-                if(utilizador != null || email != null && utilizador.Password == password)
+                // se for igual entra no if e envia-me para a homePage
+                if(utilizador != null && utilizador.Password == password)
                 {
                     labelErro.Visible = true;
                     labelErro.Text = "Login bem-sucedido ! Bem-Vindo, " + utilizador.Name;
 
-                    HomePage homepage = new HomePage();
+                    // Armazena o usuário logado na sessão
+                    sessionManager.Login(utilizador);
+
+                    HomePage homePage = new HomePage();
 
                     Hide();
-                    homepage.FormClosed += Closed_FormClosed;
-                    homepage.ShowDialog();
+                    homePage.FormClosed += Closed_FormClosed;
+                    homePage.ShowDialog();
 
                 }
                 else
@@ -122,8 +133,6 @@ namespace Projecto_TS.views
             Hide();
             register.FormClosed += Closed_FormClosed;
             register.ShowDialog();
-        }
-
-        
+        } 
     }
 }

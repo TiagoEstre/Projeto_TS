@@ -18,13 +18,37 @@ namespace Projecto_TS.views
             InitializeComponent();
         }
 
+        // buttons de fecha / minimizar / maxmizar janela
+        private void buttonMaxime_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.TopMost = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.TopMost = false;
+            }
+        }
+        private void buttonMinimed_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void buttonClosed_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
         private void buttonrRegister_Click(object sender, EventArgs e)
         {
             // Valores das TextBox
-            string Username = textBoxUsername.Text;
+            string User = textBoxUser.Text;
             string Email = textBoxEmail.Text;
             string Phone = textBoxPhone.Text;
-            string User = textBoxUser.Text;
+            string Username = textBoxUsername.Text;
             string Password = textBoxPassword.Text;
             string ConfirmePassword = textBoxConfirPassword.Text;
 
@@ -51,10 +75,10 @@ namespace Projecto_TS.views
                 // Cria uma nova instância de Utilizador
                 var novoUtilizador = new Utilizador
                 {
-                    Username = Username,
+                    Username = User,
                     Email = Email,
                     Numero = Phone,
-                    Name = User,
+                    Name = Username,
                     Password = Password,
                 };
 
