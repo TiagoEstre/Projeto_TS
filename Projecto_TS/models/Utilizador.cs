@@ -17,7 +17,11 @@ namespace Projecto_TS.models
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Year { get; set;}
-        public string Description { get; set; }
+<<<<<<< HEAD
+        public string Status { get; set; }  
+=======
+        public string Status { get; set; }
+>>>>>>> a685692f795ab7acff471ee997f71d47d49bd017
 
         public Utilizador()
         {

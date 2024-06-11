@@ -10,6 +10,7 @@ namespace Projecto_TS
 {
     internal class ChatContext : DbContext
     {
-        public DbSet<Utilizador> utilizadors {  get; set; }
+        public DbSet<Utilizador> Utilizadors {  get; set; }
+        public DbSet<Mensagem> Mensagem { get; set;}
     }
 }

@@ -83,7 +83,7 @@ namespace Projecto_TS.views
                 };
 
                 // Adiciona um novo utilizador ao DbSet
-                db.utilizadors.Add(novoUtilizador);
+                db.Utilizadors.Add(novoUtilizador);
 
                 // Salva as alterações na base de dados
                 db.SaveChanges();
