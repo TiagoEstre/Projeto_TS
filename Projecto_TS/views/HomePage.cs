@@ -10,28 +10,41 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using Projecto_TS.models;
 using Projecto_TS.controller;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Net.Sockets;
 using Newtonsoft.Json;
 using System.IO;
 using System.Security.Cryptography;
+using System.Net.Http;
+using System.Net;
 
 namespace Projecto_TS.views
 {
     public partial class HomePage : Form
     {
+        private const int PORT = 500;
+        NetworkStream networkStream;
+        TcpClient tcpClient;
+        ProtocolSI protocolSI;
+
         public HomePage()
         {
             InitializeComponent();
+            IPEndPoint endPoint = new IPEndPoint(IPAddress.Loopback, PORT);
+            tcpClient = new TcpClient();
+            tcpClient.Connect(endPoint);
+            networkStream = tcpClient.GetStream();
+            protocolSI = new ProtocolSI();
         }
         private void buttonSend_Click(object sender, EventArgs e)
         {
-            string message = textBoxMesagem.Text;
+            string msg = textBoxMesagem.Text;
+            textBoxMesagem.Clear();
 
-            if (!string.IsNullOrEmpty(message))
-            {
-                listBoxMessager.Items.Add(message);
-                textBoxMesagem.Clear();
+            byte[] packet = protocolSI.Make(ProtocolSICmdType.DATA, msg);
+            networkStream.Write(packet, 0, packet.Length);
+            while (protocolSI.GetCmdType() != ProtocolSICmdType.ACK ) 
+            { 
+                networkStream.Read(protocolSI.Buffer,0,protocolSI.Buffer.Length);
             }
         }
 
