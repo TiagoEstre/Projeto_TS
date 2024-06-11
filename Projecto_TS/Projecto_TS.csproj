@@ -45,6 +45,9 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -64,11 +67,12 @@
   <ItemGroup>
     <Compile Include="ChatContext.cs" />
     <Compile Include="controller\sessionManager.cs" />
-    <Compile Include="Migrations\202406092356405_Chat.cs" />
-    <Compile Include="Migrations\202406092356405_Chat.Designer.cs">
-      <DependentUpon>202406092356405_Chat.cs</DependentUpon>
+    <Compile Include="Migrations\202406111528154_Chat.cs" />
+    <Compile Include="Migrations\202406111528154_Chat.Designer.cs">
+      <DependentUpon>202406111528154_Chat.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="models\Mensagem.cs" />
     <Compile Include="models\Utilizador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,8 +100,8 @@
     <Compile Include="views\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202406092356405_Chat.resx">
-      <DependentUpon>202406092356405_Chat.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202406111528154_Chat.resx">
+      <DependentUpon>202406111528154_Chat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

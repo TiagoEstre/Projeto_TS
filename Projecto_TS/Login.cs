@@ -101,7 +101,7 @@ namespace Projecto_TS.views
             using(var db = new ChatContext())
             {
                 // vai buscar o Username na base de dados e vê se igual ao username da textBox
-                var utilizador = db.utilizadors.FirstOrDefault(u => u.Username == username || u.Email == username);
+                var utilizador = db.Utilizadors.FirstOrDefault(u => u.Username == username || u.Email == username);
 
                 // se for igual entra no if e envia-me para a homePage
                 if(utilizador != null && utilizador.Password == password)

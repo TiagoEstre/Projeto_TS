@@ -17,7 +17,6 @@ namespace Projecto_TS.models
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Year { get; set;}
-        public string Description { get; set; }
 
         public Utilizador()
         {
