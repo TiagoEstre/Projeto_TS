@@ -109,5 +109,29 @@ namespace Projecto_TS.views
                 textBoxMesagem.Enabled = true;
             }
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.TopMost = true;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.TopMost = false;
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

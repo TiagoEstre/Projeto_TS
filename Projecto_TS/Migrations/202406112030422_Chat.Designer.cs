@@ -13,7 +13,7 @@ namespace Projecto_TS.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202406111528154_Chat"; }
+            get { return "202406112030422_Chat"; }
         }
         
         string IMigrationMetadata.Source

@@ -20,14 +20,28 @@
                 .ForeignKey("dbo.Utilizadors", t => t.UtilizadorId, cascadeDelete: true)
                 .Index(t => t.UtilizadorId);
             
-            DropColumn("dbo.Utilizadors", "Description");
+            CreateTable(
+                "dbo.Utilizadors",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Username = c.String(),
+                        Password = c.String(),
+                        Email = c.String(),
+                        Phone = c.String(),
+                        Year = c.String(),
+                        Status = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Utilizadors", "Description", c => c.String());
             DropForeignKey("dbo.Mensagems", "UtilizadorId", "dbo.Utilizadors");
             DropIndex("dbo.Mensagems", new[] { "UtilizadorId" });
+            DropTable("dbo.Utilizadors");
             DropTable("dbo.Mensagems");
         }
     }
