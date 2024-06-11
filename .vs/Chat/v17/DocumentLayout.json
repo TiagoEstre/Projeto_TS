@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\tiago\\Documents\\IPL\\2 - Semestre\\Projetos\\TS - Topicos de Seguranca\\v3\\Projeto_TS\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DFD90B40-8093-47E0-B1A7-571762A5F48F}|Projecto_TS\\Projecto_TS.csproj|c:\\users\\tiago\\documents\\ipl\\2 - semestre\\projetos\\ts - topicos de seguranca\\v3\\projeto_ts\\projecto_ts\\migrations\\202406092356405_chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD90B40-8093-47E0-B1A7-571762A5F48F}|Projecto_TS\\Projecto_TS.csproj|solutionrelative:projecto_ts\\migrations\\202406092356405_chat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "202406092356405_Chat.cs",
-              "DocumentMoniker": "C:\\Users\\tiago\\Documents\\IPL\\2 - Semestre\\Projetos\\TS - Topicos de Seguranca\\v3\\Projeto_TS\\Projecto_TS\\Migrations\\202406092356405_Chat.cs",
-              "RelativeDocumentMoniker": "Projecto_TS\\Migrations\\202406092356405_Chat.cs",
-              "ToolTip": "C:\\Users\\tiago\\Documents\\IPL\\2 - Semestre\\Projetos\\TS - Topicos de Seguranca\\v3\\Projeto_TS\\Projecto_TS\\Migrations\\202406092356405_Chat.cs",
-              "RelativeToolTip": "Projecto_TS\\Migrations\\202406092356405_Chat.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T22:29:30.212Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

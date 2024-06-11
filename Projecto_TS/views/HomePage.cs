@@ -30,12 +30,19 @@ namespace Projecto_TS.views
             definition.ShowDialog();
         }
 
+
         private void buttonSend_Click(object sender, EventArgs e)
         {
-            string mesage = textBoxMesagem.Text;
+            if (!string.IsNullOrEmpty(textBoxMesagem.Text.Trim()))
+            {
+                listBoxMessager.Items.Add(textBoxMesagem.Text.Trim());
 
-            listBoxMessager.Text = mesage;
+                textBoxMesagem.Clear();
+
+                textBoxMesagem.Focus();
+            }
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -69,10 +76,66 @@ namespace Projecto_TS.views
                 }
             }
         }
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchQuery = textBoxSearch.Text.Trim();
+
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                using (var db = new ChatContext())
+                {
+                    var results = db.utilizadors
+                        .Where(u => u.Name.Contains(searchQuery))
+                        .Select(u => new { u.Name, u.Username })
+                        .ToList();
+
+                    listBoxSearch.Items.Clear();
+
+                    if (results.Count > 0)
+                    {
+                        foreach (var result in results)
+                        {
+                            listBoxSearch.Items.Add($"{result.Name} ({result.Username})");
+                        }
+                        listBoxSearch.Visible = true; // Mostrar a ListBox
+                    }
+                    else
+                    {
+                        listBoxSearch.Items.Add("Nenhum resultado encontrado.");
+                        listBoxSearch.Visible = true; // Mostrar a ListBox mesmo se não houver resultados
+                    }
+                }
+            }
+            else
+            {
+                listBoxSearch.Visible = false; // Esconder a ListBox se a busca estiver vazia
+            }
+        }
+        private void listBoxSearch_Leave(object sender, EventArgs e)
+        {
+            listBoxSearch.Visible = false;
+        }
+        private void HomePage_Leave(object sender, EventArgs e)
+        {
+            listBoxSearch.Visible = false;
+        }
+        private void panel3_Leave(object sender, EventArgs e)
+        {
+            listBoxSearch.Visible = false;
+        }
+        private void listBoxMessager_Leave(object sender, EventArgs e)
+        {
+            listBoxSearch.Visible = false;
+        }
+
 
         private void listBoxSearch_DoubleClick(object sender, EventArgs e)
         {
             
         }
+
+        
+
+        
     }
 }

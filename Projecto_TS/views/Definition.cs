@@ -16,5 +16,10 @@ namespace Projecto_TS.views
         {
             InitializeComponent();
         }
+
+        private void radioButtonOn_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
