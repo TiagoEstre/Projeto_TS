@@ -34,18 +34,18 @@
             this.PictureBoxMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PictureBoxClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PanelMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.PictureBoxClient = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.PictureBoxSettings = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PictureBoxChat = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelMessage = new Guna.UI2.WinForms.Guna2Panel();
             this.panelConsola.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxFullScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxClose)).BeginInit();
             this.PanelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxChat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelConsola
@@ -104,14 +104,29 @@
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(22)))), ((int)(((byte)(50)))));
+            this.PanelMenu.Controls.Add(this.PictureBoxClient);
             this.PanelMenu.Controls.Add(this.PictureBoxSettings);
             this.PanelMenu.Controls.Add(this.PictureBoxChat);
-            this.PanelMenu.Controls.Add(this.guna2PictureBox1);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 30);
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(64, 745);
             this.PanelMenu.TabIndex = 7;
+            // 
+            // PictureBoxClient
+            // 
+            this.PictureBoxClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureBoxClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PictureBoxClient.Enabled = false;
+            this.PictureBoxClient.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxClient.Image")));
+            this.PictureBoxClient.ImageRotate = 0F;
+            this.PictureBoxClient.Location = new System.Drawing.Point(7, 12);
+            this.PictureBoxClient.Name = "PictureBoxClient";
+            this.PictureBoxClient.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PictureBoxClient.Size = new System.Drawing.Size(50, 50);
+            this.PictureBoxClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBoxClient.TabIndex = 11;
+            this.PictureBoxClient.TabStop = false;
             // 
             // PictureBoxSettings
             // 
@@ -142,20 +157,6 @@
             this.PictureBoxChat.TabStop = false;
             this.PictureBoxChat.Click += new System.EventHandler(this.PictureBoxMessage_Click);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2PictureBox1.BorderRadius = 25;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(7, 12);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 8;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // panelMessage
             // 
             this.panelMessage.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -182,9 +183,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxClose)).EndInit();
             this.PanelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxClient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxChat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,12 +193,12 @@
         #endregion
         private System.Windows.Forms.Panel panelConsola;
         private Guna.UI2.WinForms.Guna2Panel PanelMenu;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox PictureBoxSettings;
         private Guna.UI2.WinForms.Guna2PictureBox PictureBoxChat;
         private Guna.UI2.WinForms.Guna2Panel panelMessage;
         private Guna.UI2.WinForms.Guna2PictureBox PictureBoxFullScreen;
         private Guna.UI2.WinForms.Guna2PictureBox PictureBoxMinimize;
         private Guna.UI2.WinForms.Guna2PictureBox PictureBoxClose;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox PictureBoxClient;
     }
 }

@@ -87,7 +87,6 @@ C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\bin\Debug\EntityFramework.xml
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.csproj.AssemblyReference.cache
-C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.Migrations.Chat.resources
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.Properties.Resources.resources
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.views.Chat.resources
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.views.Message.resources
@@ -100,3 +99,4 @@ C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto.90045430.Up2Date
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.exe
 C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.pdb
+C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v5\Projeto_TS\Projecto_TS\obj\Debug\Projecto_TS.Migrations.Clietes.resources

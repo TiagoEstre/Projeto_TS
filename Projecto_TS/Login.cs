@@ -1,4 +1,5 @@
-﻿using Projecto_TS.models;
+﻿using Projecto_TS.controller;
+using Projecto_TS.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -103,6 +104,8 @@ namespace Projecto_TS.views
                     labelErro.Visible = true;
                     labelErro.Text = "Login bem-sucedido ! Bem-Vindo, " + utilizador.Name;
 
+                    // Armazena o usuário logado na sessão
+                    sessionManager.Login(utilizador);
 
                     HomePage homePage = new HomePage();
 

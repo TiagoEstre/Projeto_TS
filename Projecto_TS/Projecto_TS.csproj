@@ -63,9 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChatContext.cs" />
-    <Compile Include="Migrations\202406091357057_Chat.cs" />
-    <Compile Include="Migrations\202406091357057_Chat.Designer.cs">
-      <DependentUpon>202406091357057_Chat.cs</DependentUpon>
+    <Compile Include="controller\sessionManager.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Migrations\202406142359467_Cliete.cs" />
+    <Compile Include="Migrations\202406142359467_Cliete.Designer.cs">
+      <DependentUpon>202406142359467_Cliete.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="models\Utilizador.cs" />
@@ -107,8 +109,8 @@
     <Compile Include="views\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202406091357057_Chat.resx">
-      <DependentUpon>202406091357057_Chat.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202406142359467_Cliete.resx">
+      <DependentUpon>202406142359467_Cliete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,9 +153,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

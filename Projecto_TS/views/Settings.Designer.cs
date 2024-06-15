@@ -38,11 +38,11 @@
             this.ButtonOccupied = new System.Windows.Forms.RadioButton();
             this.labelEstados = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.CircleProgressBarStatus2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.CircleProgressBarStatus = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.PictureBoxPhoto = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.CircleProgressBarStatus2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.pictureBoxPhoto = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.buttonLogout = new Guna.UI2.WinForms.Guna2Button();
             this.ButtonNightMode = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.labelChangeAdress = new System.Windows.Forms.Label();
@@ -50,13 +50,14 @@
             this.labelChangePassword = new System.Windows.Forms.Label();
             this.labelChangeName = new System.Windows.Forms.Label();
             this.textBoxName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TextBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TextBoxPhone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.TextBoxAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.guna2Panel1.SuspendLayout();
-            this.CircleProgressBarStatus2.SuspendLayout();
             this.CircleProgressBarStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPhoto)).BeginInit();
+            this.CircleProgressBarStatus2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -167,9 +168,9 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
+            this.guna2Panel1.Controls.Add(this.CircleProgressBarStatus);
             this.guna2Panel1.Controls.Add(this.textBoxUsername);
-            this.guna2Panel1.Controls.Add(this.CircleProgressBarStatus2);
-            this.guna2Panel1.Controls.Add(this.guna2Button3);
+            this.guna2Panel1.Controls.Add(this.buttonLogout);
             this.guna2Panel1.Controls.Add(this.ButtonNightMode);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -177,6 +178,60 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(294, 745);
             this.guna2Panel1.TabIndex = 25;
+            // 
+            // CircleProgressBarStatus
+            // 
+            this.CircleProgressBarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CircleProgressBarStatus.Controls.Add(this.CircleProgressBarStatus2);
+            this.CircleProgressBarStatus.FillColor = System.Drawing.Color.Transparent;
+            this.CircleProgressBarStatus.FillThickness = 3;
+            this.CircleProgressBarStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CircleProgressBarStatus.ForeColor = System.Drawing.Color.White;
+            this.CircleProgressBarStatus.Location = new System.Drawing.Point(68, 28);
+            this.CircleProgressBarStatus.Minimum = 0;
+            this.CircleProgressBarStatus.Name = "CircleProgressBarStatus";
+            this.CircleProgressBarStatus.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
+            this.CircleProgressBarStatus.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(30)))));
+            this.CircleProgressBarStatus.ProgressThickness = 3;
+            this.CircleProgressBarStatus.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.CircleProgressBarStatus.Size = new System.Drawing.Size(160, 160);
+            this.CircleProgressBarStatus.TabIndex = 37;
+            this.CircleProgressBarStatus.Text = "guna2CircleProgressBar1";
+            this.CircleProgressBarStatus.Value = 40;
+            // 
+            // CircleProgressBarStatus2
+            // 
+            this.CircleProgressBarStatus2.BackColor = System.Drawing.Color.Transparent;
+            this.CircleProgressBarStatus2.Controls.Add(this.pictureBoxPhoto);
+            this.CircleProgressBarStatus2.FillColor = System.Drawing.Color.Transparent;
+            this.CircleProgressBarStatus2.FillThickness = 3;
+            this.CircleProgressBarStatus2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CircleProgressBarStatus2.ForeColor = System.Drawing.Color.Transparent;
+            this.CircleProgressBarStatus2.Location = new System.Drawing.Point(5, 5);
+            this.CircleProgressBarStatus2.Minimum = 0;
+            this.CircleProgressBarStatus2.Name = "CircleProgressBarStatus2";
+            this.CircleProgressBarStatus2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(30)))));
+            this.CircleProgressBarStatus2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
+            this.CircleProgressBarStatus2.ProgressThickness = 3;
+            this.CircleProgressBarStatus2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.CircleProgressBarStatus2.Size = new System.Drawing.Size(150, 150);
+            this.CircleProgressBarStatus2.TabIndex = 34;
+            this.CircleProgressBarStatus2.Text = "guna2CircleProgressBar1";
+            this.CircleProgressBarStatus2.Value = 33;
+            // 
+            // pictureBoxPhoto
+            // 
+            this.pictureBoxPhoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPhoto.Image")));
+            this.pictureBoxPhoto.ImageRotate = 0F;
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(18, 14);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(120, 120);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPhoto.TabIndex = 38;
+            this.pictureBoxPhoto.TabStop = false;
+            this.pictureBoxPhoto.Click += new System.EventHandler(this.PictureBoxPhoto_Click);
             // 
             // textBoxUsername
             // 
@@ -187,7 +242,7 @@
             this.textBoxUsername.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxUsername.Location = new System.Drawing.Point(0, 211);
+            this.textBoxUsername.Location = new System.Drawing.Point(3, 199);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(291, 23);
             this.textBoxUsername.TabIndex = 35;
@@ -199,79 +254,23 @@
             this.textBoxUsername.MouseMove += new System.Windows.Forms.MouseEventHandler(this.textBoxUsername_MouseMove);
             this.textBoxUsername.MouseUp += new System.Windows.Forms.MouseEventHandler(this.textBoxUsername_MouseUp);
             // 
-            // CircleProgressBarStatus2
+            // buttonLogout
             // 
-            this.CircleProgressBarStatus2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.buttonLogout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CircleProgressBarStatus2.Controls.Add(this.CircleProgressBarStatus);
-            this.CircleProgressBarStatus2.FillColor = System.Drawing.Color.Transparent;
-            this.CircleProgressBarStatus2.FillThickness = 3;
-            this.CircleProgressBarStatus2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CircleProgressBarStatus2.ForeColor = System.Drawing.Color.White;
-            this.CircleProgressBarStatus2.Location = new System.Drawing.Point(66, 31);
-            this.CircleProgressBarStatus2.Minimum = 0;
-            this.CircleProgressBarStatus2.Name = "CircleProgressBarStatus2";
-            this.CircleProgressBarStatus2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
-            this.CircleProgressBarStatus2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(30)))));
-            this.CircleProgressBarStatus2.ProgressThickness = 3;
-            this.CircleProgressBarStatus2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.CircleProgressBarStatus2.Size = new System.Drawing.Size(160, 160);
-            this.CircleProgressBarStatus2.TabIndex = 34;
-            this.CircleProgressBarStatus2.Text = "guna2CircleProgressBar1";
-            this.CircleProgressBarStatus2.Value = 40;
-            // 
-            // CircleProgressBarStatus
-            // 
-            this.CircleProgressBarStatus.BackColor = System.Drawing.Color.Transparent;
-            this.CircleProgressBarStatus.Controls.Add(this.PictureBoxPhoto);
-            this.CircleProgressBarStatus.FillColor = System.Drawing.Color.Transparent;
-            this.CircleProgressBarStatus.FillThickness = 3;
-            this.CircleProgressBarStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CircleProgressBarStatus.ForeColor = System.Drawing.Color.Transparent;
-            this.CircleProgressBarStatus.Location = new System.Drawing.Point(5, 5);
-            this.CircleProgressBarStatus.Minimum = 0;
-            this.CircleProgressBarStatus.Name = "CircleProgressBarStatus";
-            this.CircleProgressBarStatus.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(30)))));
-            this.CircleProgressBarStatus.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
-            this.CircleProgressBarStatus.ProgressThickness = 3;
-            this.CircleProgressBarStatus.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.CircleProgressBarStatus.Size = new System.Drawing.Size(150, 150);
-            this.CircleProgressBarStatus.TabIndex = 34;
-            this.CircleProgressBarStatus.Text = "guna2CircleProgressBar1";
-            this.CircleProgressBarStatus.Value = 33;
-            // 
-            // PictureBoxPhoto
-            // 
-            this.PictureBoxPhoto.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBoxPhoto.BorderRadius = 75;
-            this.PictureBoxPhoto.FillColor = System.Drawing.Color.Transparent;
-            this.PictureBoxPhoto.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxPhoto.Image")));
-            this.PictureBoxPhoto.ImageRotate = 0F;
-            this.PictureBoxPhoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("PictureBoxPhoto.InitialImage")));
-            this.PictureBoxPhoto.Location = new System.Drawing.Point(0, 0);
-            this.PictureBoxPhoto.Name = "PictureBoxPhoto";
-            this.PictureBoxPhoto.Size = new System.Drawing.Size(150, 150);
-            this.PictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBoxPhoto.TabIndex = 0;
-            this.PictureBoxPhoto.TabStop = false;
-            this.PictureBoxPhoto.Click += new System.EventHandler(this.PictureBoxPhoto_Click);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(0, 665);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(294, 45);
-            this.guna2Button3.TabIndex = 28;
-            this.guna2Button3.Text = "LOG OUT";
+            this.buttonLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(90)))));
+            this.buttonLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.buttonLogout.ForeColor = System.Drawing.Color.White;
+            this.buttonLogout.Location = new System.Drawing.Point(0, 665);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(294, 45);
+            this.buttonLogout.TabIndex = 28;
+            this.buttonLogout.Text = "LOG OUT";
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // ButtonNightMode
             // 
@@ -396,66 +395,66 @@
             this.textBoxName.Enter += new System.EventHandler(this.textBoxName_Enter);
             this.textBoxName.Leave += new System.EventHandler(this.TextBoxName_Leave);
             // 
-            // TextBoxPassword
+            // textBoxPassword
             // 
-            this.TextBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBoxPassword.AutoRoundedCorners = true;
-            this.TextBoxPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
-            this.TextBoxPassword.BorderRadius = 14;
-            this.TextBoxPassword.BorderThickness = 2;
-            this.TextBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxPassword.DefaultText = "Nome";
-            this.TextBoxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBoxPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBoxPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
-            this.TextBoxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBoxPassword.ForeColor = System.Drawing.Color.White;
-            this.TextBoxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxPassword.Location = new System.Drawing.Point(558, 259);
-            this.TextBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextBoxPassword.Name = "TextBoxPassword";
-            this.TextBoxPassword.PasswordChar = '●';
-            this.TextBoxPassword.PlaceholderText = "";
-            this.TextBoxPassword.SelectedText = "";
-            this.TextBoxPassword.Size = new System.Drawing.Size(455, 31);
-            this.TextBoxPassword.TabIndex = 35;
-            this.TextBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TextBoxPassword.UseSystemPasswordChar = true;
-            this.TextBoxPassword.Enter += new System.EventHandler(this.TextBoxPassword_Enter);
-            this.TextBoxPassword.Leave += new System.EventHandler(this.TextBoxPassword_Leave);
+            this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPassword.AutoRoundedCorners = true;
+            this.textBoxPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
+            this.textBoxPassword.BorderRadius = 14;
+            this.textBoxPassword.BorderThickness = 2;
+            this.textBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxPassword.DefaultText = "Nome";
+            this.textBoxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
+            this.textBoxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxPassword.ForeColor = System.Drawing.Color.White;
+            this.textBoxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxPassword.Location = new System.Drawing.Point(558, 259);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '●';
+            this.textBoxPassword.PlaceholderText = "";
+            this.textBoxPassword.SelectedText = "";
+            this.textBoxPassword.Size = new System.Drawing.Size(455, 31);
+            this.textBoxPassword.TabIndex = 35;
+            this.textBoxPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxPassword.UseSystemPasswordChar = true;
+            this.textBoxPassword.Enter += new System.EventHandler(this.TextBoxPassword_Enter);
+            this.textBoxPassword.Leave += new System.EventHandler(this.TextBoxPassword_Leave);
             // 
-            // TextBoxPhone
+            // textBoxPhone
             // 
-            this.TextBoxPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextBoxPhone.AutoRoundedCorners = true;
-            this.TextBoxPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
-            this.TextBoxPhone.BorderRadius = 14;
-            this.TextBoxPhone.BorderThickness = 2;
-            this.TextBoxPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxPhone.DefaultText = "Nome";
-            this.TextBoxPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TextBoxPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TextBoxPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TextBoxPhone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
-            this.TextBoxPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TextBoxPhone.ForeColor = System.Drawing.Color.White;
-            this.TextBoxPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxPhone.Location = new System.Drawing.Point(558, 339);
-            this.TextBoxPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TextBoxPhone.Name = "TextBoxPhone";
-            this.TextBoxPhone.PasswordChar = '\0';
-            this.TextBoxPhone.PlaceholderText = "";
-            this.TextBoxPhone.SelectedText = "";
-            this.TextBoxPhone.Size = new System.Drawing.Size(455, 31);
-            this.TextBoxPhone.TabIndex = 35;
-            this.TextBoxPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TextBoxPhone.Enter += new System.EventHandler(this.TextBoxPhone_Enter);
-            this.TextBoxPhone.Leave += new System.EventHandler(this.TextBoxPhone_Leave);
+            this.textBoxPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPhone.AutoRoundedCorners = true;
+            this.textBoxPhone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
+            this.textBoxPhone.BorderRadius = 14;
+            this.textBoxPhone.BorderThickness = 2;
+            this.textBoxPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxPhone.DefaultText = "Telemovel";
+            this.textBoxPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxPhone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
+            this.textBoxPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxPhone.ForeColor = System.Drawing.Color.White;
+            this.textBoxPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxPhone.Location = new System.Drawing.Point(558, 339);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.PasswordChar = '\0';
+            this.textBoxPhone.PlaceholderText = "";
+            this.textBoxPhone.SelectedText = "";
+            this.textBoxPhone.Size = new System.Drawing.Size(455, 31);
+            this.textBoxPhone.TabIndex = 35;
+            this.textBoxPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxPhone.Enter += new System.EventHandler(this.TextBoxPhone_Enter);
+            this.textBoxPhone.Leave += new System.EventHandler(this.TextBoxPhone_Leave);
             // 
             // TextBoxAddress
             // 
@@ -465,7 +464,7 @@
             this.TextBoxAddress.BorderRadius = 14;
             this.TextBoxAddress.BorderThickness = 2;
             this.TextBoxAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextBoxAddress.DefaultText = "Nome";
+            this.TextBoxAddress.DefaultText = "Morada";
             this.TextBoxAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.TextBoxAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.TextBoxAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -487,6 +486,11 @@
             this.TextBoxAddress.Enter += new System.EventHandler(this.TextBoxAddress_Enter);
             this.TextBoxAddress.Leave += new System.EventHandler(this.TextBoxAddress_Leave);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "JPG(*.jpg)|*.jpg|(*.pgn)|*.png";
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -494,8 +498,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(1195, 745);
             this.Controls.Add(this.TextBoxAddress);
-            this.Controls.Add(this.TextBoxPhone);
-            this.Controls.Add(this.TextBoxPassword);
+            this.Controls.Add(this.textBoxPhone);
+            this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelChangeAdress);
             this.Controls.Add(this.labelChangePhone);
@@ -519,9 +523,9 @@
             this.Text = "Definitions";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.CircleProgressBarStatus2.ResumeLayout(false);
             this.CircleProgressBarStatus.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPhoto)).EndInit();
+            this.CircleProgressBarStatus2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,20 +541,21 @@
         private System.Windows.Forms.RadioButton ButtonOccupied;
         private System.Windows.Forms.Label labelEstados;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button buttonLogout;
         private Guna.UI2.WinForms.Guna2Button ButtonNightMode;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Label labelChangeAdress;
         private System.Windows.Forms.Label labelChangePhone;
         private System.Windows.Forms.Label labelChangePassword;
         private System.Windows.Forms.Label labelChangeName;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBarStatus;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBarStatus2;
         private Guna.UI2.WinForms.Guna2TextBox textBoxName;
-        private Guna.UI2.WinForms.Guna2TextBox TextBoxPassword;
-        private Guna.UI2.WinForms.Guna2TextBox TextBoxPhone;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxPassword;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxPhone;
         private Guna.UI2.WinForms.Guna2TextBox TextBoxAddress;
         private System.Windows.Forms.TextBox textBoxUsername;
-        private Guna.UI2.WinForms.Guna2PictureBox PictureBoxPhoto;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBarStatus;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBarStatus2;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxPhoto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

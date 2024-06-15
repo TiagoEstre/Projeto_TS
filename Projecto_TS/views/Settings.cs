@@ -7,11 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Projecto_TS.controller;
+using System.Xml.Serialization;
 
 namespace Projecto_TS.views
 {
     public partial class Settings : Form
     {
+        public event EventHandler<string> PhotoUpdated;
+
+        string origemCompleto = "";
+        string foto = "";
+        string pastaDestino = Global.caminhoPhoto;
+        string destinoCompleto = "";
+
         private string NameUser;
         private string Password;
         private string Phone;
@@ -30,35 +40,111 @@ namespace Projecto_TS.views
         public Settings()
         {
             InitializeComponent();
-
+            LoadCurrentUser();
             InitializeCustomComponents();
+        }
+
+        private void LoadSattus()
+        {
+            if (sessionManager.IsLoggedIn())
+            {
+                var currentUser = sessionManager.CurrentUser;
+
+                if(currentUser.Status == "Occupied")
+                {
+                    CircleProgressBarStatus.ProgressColor = Color.FromArgb(255, 251, 165);
+                    CircleProgressBarStatus.ProgressColor2 = Color.FromArgb(120, 171, 0);
+
+                    CircleProgressBarStatus2.ProgressColor = Color.FromArgb(120, 171, 0);
+                    CircleProgressBarStatus2.ProgressColor2 = Color.FromArgb(255, 251, 165);
+                }
+                else if(currentUser.Status == "Offline")
+                {
+                    CircleProgressBarStatus.ProgressColor = Color.FromArgb(239, 161, 161);
+                    CircleProgressBarStatus.ProgressColor2 = Color.FromArgb(154, 26, 26);
+
+                    CircleProgressBarStatus2.ProgressColor = Color.FromArgb(154, 26, 26);
+                    CircleProgressBarStatus2.ProgressColor2 = Color.FromArgb(239, 161, 161);
+                }
+                else if (currentUser.Status == "Online")
+                {
+                    CircleProgressBarStatus.ProgressColor = Color.FromArgb(120, 180, 30);
+                    CircleProgressBarStatus.ProgressColor2 = Color.FromArgb(150, 100, 50);
+
+                    CircleProgressBarStatus2.ProgressColor = Color.FromArgb(150, 100, 50);
+                    CircleProgressBarStatus2.ProgressColor2 = Color.FromArgb(120, 180, 30);
+                }
+            }
+        }
+
+        private void LoadCurrentUser()
+        {
+            if (sessionManager.IsLoggedIn())
+            {
+                var currentUser = sessionManager.CurrentUser;
+
+                LoadSattus();
+                textBoxName.Text = currentUser.Username;
+                textBoxPassword.Text = currentUser.Password;
+                textBoxPhone.Text = currentUser.Phone.ToString();
+                if(currentUser.Photo != null )
+                {
+                    pictureBoxPhoto.ImageLocation = currentUser.Photo;
+                }
+                textBoxUsername.Text = currentUser.Username;
+            }
         }
 
         // Insere uma imagem do Pc
         private void PictureBoxPhoto_Click(object sender, EventArgs e)
         {
-            // Cria uma nova instância do OpenFileDialog
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            origemCompleto = "";
+            foto = "";
+            destinoCompleto = "";
 
-            // Define os filtros de arquivo - você pode adicionar mais formatos de imagem se necessário
-            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
-            openFileDialog.Title = "Select an Image File";
-
-            // Abre a caixa de diálogo para selecionar um arquivo
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    // Carrega a imagem selecionada na PictureBox
-                    PictureBoxPhoto.Image = new System.Drawing.Bitmap(openFileDialog.FileName);
+                origemCompleto = openFileDialog1.FileName;
+                foto = openFileDialog1.SafeFileName;
+                destinoCompleto = pastaDestino + foto;
+            }
 
-                    // Ajusta o SizeMode para ajustar a imagem no PictureBox
-                    PictureBoxPhoto.SizeMode = PictureBoxSizeMode.Zoom;
-                }
-                catch (Exception ex)
+            if (File.Exists(destinoCompleto))
+            {
+                if(MessageBox.Show("Arquivo já existe, deseja substituir?","Substituir",MessageBoxButtons.YesNo) == DialogResult.No)
                 {
-                    MessageBox.Show("Error loading image: " + ex.Message);
+                    return;
                 }
+            }
+            System.IO.File.Copy(origemCompleto, destinoCompleto, true);
+            if (File.Exists(destinoCompleto))
+            {
+                pictureBoxPhoto.ImageLocation = destinoCompleto;
+                if (sessionManager.IsLoggedIn())
+                {
+                    using (var db = new ChatContext())
+                    {
+                        var currentUser = db.utilizadors.Find(sessionManager.CurrentUser.Id);
+                        if (currentUser != null)
+                        {
+                            currentUser.Photo = destinoCompleto;
+                            db.SaveChanges();
+
+                            // Atualizar o usuário na sessão
+                            sessionManager.CurrentUser.Photo = destinoCompleto;
+
+                            PhotoUpdated?.Invoke(this, destinoCompleto);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário não encontrado.");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Arquivo não copiado");
             }
         }
 
@@ -166,6 +252,19 @@ namespace Projecto_TS.views
             CircleProgressBarStatus2.ProgressColor = Color.FromArgb(120, 171, 0);
             CircleProgressBarStatus2.ProgressColor2 = Color.FromArgb(255, 251, 165);
 
+            using (var db = new ChatContext())
+            {
+                var currentUser = db.utilizadors.Find(sessionManager.CurrentUser.Id);
+                if (currentUser != null)
+                {
+                    currentUser.Status = "Occupied";
+                    db.SaveChanges();
+
+                    // Atualizar o usuário na sessão
+                    sessionManager.CurrentUser.Status = "Occupied";
+                }
+            }
+
         }
         private void ButtonOff_CheckedChanged(object sender, EventArgs e)
         {
@@ -174,6 +273,19 @@ namespace Projecto_TS.views
 
             CircleProgressBarStatus2.ProgressColor = Color.FromArgb(154,26,26);
             CircleProgressBarStatus2.ProgressColor2 = Color.FromArgb(239,161,161);
+
+            using (var db = new ChatContext())
+            {
+                var currentUser = db.utilizadors.Find(sessionManager.CurrentUser.Id);
+                if (currentUser != null)
+                {
+                    currentUser.Status = "Offline";
+                    db.SaveChanges();
+
+                    // Atualizar o usuário na sessão
+                    sessionManager.CurrentUser.Status = "Offline";
+                }
+            }
         }
         private void ButtonOn_CheckedChanged(object sender, EventArgs e)
         {
@@ -182,6 +294,19 @@ namespace Projecto_TS.views
 
             CircleProgressBarStatus2.ProgressColor = Color.FromArgb(150, 100, 50);
             CircleProgressBarStatus2.ProgressColor2 = Color.FromArgb(120, 180, 30);
+
+            using (var db = new ChatContext())
+            {
+                var currentUser = db.utilizadors.Find(sessionManager.CurrentUser.Id);
+                if (currentUser != null)
+                {
+                    currentUser.Status = "Online";
+                    db.SaveChanges();
+
+                    // Atualizar o usuário na sessão
+                    sessionManager.CurrentUser.Status = "Online";
+                }
+            }
         }
 
 
@@ -209,43 +334,43 @@ namespace Projecto_TS.views
 
         private void TextBoxPassword_Enter(object sender, EventArgs e)
         {
-            TextBoxPassword.Text = Password;
+            textBoxPassword.Text = Password;
 
-            if (TextBoxPassword.Text == Password)
+            if (textBoxPassword.Text == Password)
             {
-                TextBoxPassword.Text = "";
+                textBoxPassword.Text = "";
 
-                TextBoxPassword.ForeColor = Color.White;
+                textBoxPassword.ForeColor = Color.White;
             }
         }
         private void TextBoxPassword_Leave(object sender, EventArgs e)
         {
-            if (TextBoxPassword.Text == "")
+            if (textBoxPassword.Text == "")
             {
-                TextBoxPassword.Text = Password;
+                textBoxPassword.Text = Password;
 
-                TextBoxPassword.ForeColor = Color.Silver;
+                textBoxPassword.ForeColor = Color.Silver;
             }
         }
 
         private void TextBoxPhone_Enter(object sender, EventArgs e)
         {
-            TextBoxPhone.Text = Phone;
+            textBoxPhone.Text = Phone;
 
-            if (TextBoxPhone.Text == Phone)
+            if (textBoxPhone.Text == Phone)
             {
-                TextBoxPhone.Text = "";
+                textBoxPhone.Text = "";
 
-                TextBoxPhone.ForeColor = Color.White;
+                textBoxPhone.ForeColor = Color.White;
             }
         }
         private void TextBoxPhone_Leave(object sender, EventArgs e)
         {
-            if (TextBoxPhone.Text == "")
+            if (textBoxPhone.Text == "")
             {
-                TextBoxPhone.Text = Phone;
+                textBoxPhone.Text = Phone;
 
-                TextBoxPhone.ForeColor = Color.Silver;
+                textBoxPhone.ForeColor = Color.Silver;
             }
         }
 
@@ -280,17 +405,35 @@ namespace Projecto_TS.views
         }
         private void labelChangePassword_Click(object sender, EventArgs e)
         {
-            Password = TextBoxPassword.Text;
+            Password = textBoxPassword.Text;
         }
         private void labelChangePhone_Click(object sender, EventArgs e)
         {
-            Phone = TextBoxPhone.Text;
+            Phone = textBoxPhone.Text;
         }
         private void labelChangeAddress_Click(object sender, EventArgs e)
         {
             Address = TextBoxAddress.Text;
         }
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Tem certeza que deseja sair?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        
+            if (result == DialogResult.Yes)
+            {
+                // Chamar o método de logout para encerrar a sessão do usuário
+                sessionManager.Logout();
+
+                // Fechar o formulário Settings
+                this.Close();
+
+                // Fechar o formulário HomePage
+                var homePage = Application.OpenForms.OfType<HomePage>().FirstOrDefault();
+                if (homePage != null)
+                {
+                    homePage.Close();
+                }
+            }
+        }
     }
 }

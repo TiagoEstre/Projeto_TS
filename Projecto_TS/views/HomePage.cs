@@ -12,6 +12,7 @@ using Projecto_TS.models;
 using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Runtime.InteropServices;
+using Projecto_TS.controller;
 
 namespace Projecto_TS.views
 {
@@ -21,8 +22,21 @@ namespace Projecto_TS.views
         public HomePage()
         {
             InitializeComponent();
+            LoadCurrentUser();
         }
+        private void LoadCurrentUser()
+        {
+            if (sessionManager.IsLoggedIn())
+            {
+                var currentUser = sessionManager.CurrentUser;
 
+                if (currentUser.Photo != null)
+                {
+                    PictureBoxClient.ImageLocation = currentUser.Photo;
+                }
+                
+            }
+        }
 
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
@@ -80,6 +94,16 @@ namespace Projecto_TS.views
 
             panelMessage.Controls.Add(novoForm);
             novoForm.Show();
+
+            if (novoForm is Settings settingsForm)
+            {
+                settingsForm.PhotoUpdated += SettingsForm_PhotoUpdated;
+            }
+        }
+        private void SettingsForm_PhotoUpdated(object sender, string newPhotoPath)
+        {
+            // Atualizar a imagem da PictureBoxClient no HomePage com a nova foto
+            PictureBoxClient.ImageLocation = newPhotoPath;
         }
 
         private void PictureBoxMessage_Click(object sender, EventArgs e)
@@ -91,6 +115,8 @@ namespace Projecto_TS.views
         {
             trocarFormMessage(new Settings());
         }
+
+
 
         
     }

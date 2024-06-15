@@ -32,9 +32,6 @@
             this.PanelStatusClient = new Guna.UI2.WinForms.Guna2Panel();
             this.PictureBoxArrowBack = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.CircleProgressBarStatus2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.CircleProgressBarStatus = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.PictureBoxPhoto = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PanelInfChat = new Guna.UI2.WinForms.Guna2Panel();
             this.textBoxNameClient = new System.Windows.Forms.TextBox();
             this.PictureBoxClient = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -43,24 +40,27 @@
             this.textBoxMessageChat = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.listBoxChat = new System.Windows.Forms.ListBox();
+            this.CircleProgressBarStatus = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.CircleProgressBarStatus2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.PictureBoxPhoto = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.PanelStatusClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxArrowBack)).BeginInit();
-            this.CircleProgressBarStatus2.SuspendLayout();
-            this.CircleProgressBarStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPhoto)).BeginInit();
             this.PanelInfChat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxClient)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxSend)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.CircleProgressBarStatus.SuspendLayout();
+            this.CircleProgressBarStatus2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelStatusClient
             // 
             this.PanelStatusClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
+            this.PanelStatusClient.Controls.Add(this.CircleProgressBarStatus);
             this.PanelStatusClient.Controls.Add(this.PictureBoxArrowBack);
             this.PanelStatusClient.Controls.Add(this.textBoxUsername);
-            this.PanelStatusClient.Controls.Add(this.CircleProgressBarStatus2);
             this.PanelStatusClient.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanelStatusClient.Location = new System.Drawing.Point(609, 0);
             this.PanelStatusClient.Name = "PanelStatusClient";
@@ -98,62 +98,6 @@
             this.textBoxUsername.Text = "Nome";
             this.textBoxUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // CircleProgressBarStatus2
-            // 
-            this.CircleProgressBarStatus2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CircleProgressBarStatus2.Controls.Add(this.CircleProgressBarStatus);
-            this.CircleProgressBarStatus2.FillColor = System.Drawing.Color.Transparent;
-            this.CircleProgressBarStatus2.FillThickness = 3;
-            this.CircleProgressBarStatus2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CircleProgressBarStatus2.ForeColor = System.Drawing.Color.White;
-            this.CircleProgressBarStatus2.Location = new System.Drawing.Point(65, 37);
-            this.CircleProgressBarStatus2.Minimum = 0;
-            this.CircleProgressBarStatus2.Name = "CircleProgressBarStatus2";
-            this.CircleProgressBarStatus2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
-            this.CircleProgressBarStatus2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(30)))));
-            this.CircleProgressBarStatus2.ProgressThickness = 3;
-            this.CircleProgressBarStatus2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.CircleProgressBarStatus2.Size = new System.Drawing.Size(160, 160);
-            this.CircleProgressBarStatus2.TabIndex = 36;
-            this.CircleProgressBarStatus2.Text = "guna2CircleProgressBar1";
-            this.CircleProgressBarStatus2.Value = 40;
-            // 
-            // CircleProgressBarStatus
-            // 
-            this.CircleProgressBarStatus.BackColor = System.Drawing.Color.Transparent;
-            this.CircleProgressBarStatus.Controls.Add(this.PictureBoxPhoto);
-            this.CircleProgressBarStatus.FillColor = System.Drawing.Color.Transparent;
-            this.CircleProgressBarStatus.FillThickness = 3;
-            this.CircleProgressBarStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.CircleProgressBarStatus.ForeColor = System.Drawing.Color.Transparent;
-            this.CircleProgressBarStatus.Location = new System.Drawing.Point(5, 5);
-            this.CircleProgressBarStatus.Minimum = 0;
-            this.CircleProgressBarStatus.Name = "CircleProgressBarStatus";
-            this.CircleProgressBarStatus.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(30)))));
-            this.CircleProgressBarStatus.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
-            this.CircleProgressBarStatus.ProgressThickness = 3;
-            this.CircleProgressBarStatus.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.CircleProgressBarStatus.Size = new System.Drawing.Size(150, 150);
-            this.CircleProgressBarStatus.TabIndex = 34;
-            this.CircleProgressBarStatus.Text = "guna2CircleProgressBar1";
-            this.CircleProgressBarStatus.Value = 33;
-            // 
-            // PictureBoxPhoto
-            // 
-            this.PictureBoxPhoto.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBoxPhoto.BorderRadius = 75;
-            this.PictureBoxPhoto.FillColor = System.Drawing.Color.Transparent;
-            this.PictureBoxPhoto.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxPhoto.Image")));
-            this.PictureBoxPhoto.ImageRotate = 0F;
-            this.PictureBoxPhoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("PictureBoxPhoto.InitialImage")));
-            this.PictureBoxPhoto.Location = new System.Drawing.Point(0, 0);
-            this.PictureBoxPhoto.Name = "PictureBoxPhoto";
-            this.PictureBoxPhoto.Size = new System.Drawing.Size(150, 150);
-            this.PictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBoxPhoto.TabIndex = 0;
-            this.PictureBoxPhoto.TabStop = false;
-            // 
             // PanelInfChat
             // 
             this.PanelInfChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(22)))), ((int)(((byte)(60)))));
@@ -189,7 +133,7 @@
             // PictureBoxClient
             // 
             this.PictureBoxClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PictureBoxClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PictureBoxClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PictureBoxClient.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxClient.Image")));
             this.PictureBoxClient.ImageRotate = 0F;
             this.PictureBoxClient.Location = new System.Drawing.Point(558, 4);
@@ -284,6 +228,59 @@
             this.listBoxChat.Size = new System.Drawing.Size(586, 613);
             this.listBoxChat.TabIndex = 40;
             // 
+            // CircleProgressBarStatus
+            // 
+            this.CircleProgressBarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CircleProgressBarStatus.Controls.Add(this.CircleProgressBarStatus2);
+            this.CircleProgressBarStatus.FillColor = System.Drawing.Color.Transparent;
+            this.CircleProgressBarStatus.FillThickness = 3;
+            this.CircleProgressBarStatus.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CircleProgressBarStatus.ForeColor = System.Drawing.Color.White;
+            this.CircleProgressBarStatus.Location = new System.Drawing.Point(65, 47);
+            this.CircleProgressBarStatus.Minimum = 0;
+            this.CircleProgressBarStatus.Name = "CircleProgressBarStatus";
+            this.CircleProgressBarStatus.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
+            this.CircleProgressBarStatus.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(30)))));
+            this.CircleProgressBarStatus.ProgressThickness = 3;
+            this.CircleProgressBarStatus.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.CircleProgressBarStatus.Size = new System.Drawing.Size(160, 160);
+            this.CircleProgressBarStatus.TabIndex = 38;
+            this.CircleProgressBarStatus.Text = "guna2CircleProgressBar1";
+            this.CircleProgressBarStatus.Value = 40;
+            // 
+            // CircleProgressBarStatus2
+            // 
+            this.CircleProgressBarStatus2.BackColor = System.Drawing.Color.Transparent;
+            this.CircleProgressBarStatus2.Controls.Add(this.PictureBoxPhoto);
+            this.CircleProgressBarStatus2.FillColor = System.Drawing.Color.Transparent;
+            this.CircleProgressBarStatus2.FillThickness = 3;
+            this.CircleProgressBarStatus2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.CircleProgressBarStatus2.ForeColor = System.Drawing.Color.Transparent;
+            this.CircleProgressBarStatus2.Location = new System.Drawing.Point(5, 5);
+            this.CircleProgressBarStatus2.Minimum = 0;
+            this.CircleProgressBarStatus2.Name = "CircleProgressBarStatus2";
+            this.CircleProgressBarStatus2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(180)))), ((int)(((byte)(30)))));
+            this.CircleProgressBarStatus2.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))));
+            this.CircleProgressBarStatus2.ProgressThickness = 3;
+            this.CircleProgressBarStatus2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.CircleProgressBarStatus2.Size = new System.Drawing.Size(150, 150);
+            this.CircleProgressBarStatus2.TabIndex = 34;
+            this.CircleProgressBarStatus2.Text = "guna2CircleProgressBar1";
+            this.CircleProgressBarStatus2.Value = 33;
+            // 
+            // PictureBoxPhoto
+            // 
+            this.PictureBoxPhoto.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxPhoto.Image")));
+            this.PictureBoxPhoto.ImageRotate = 0F;
+            this.PictureBoxPhoto.Location = new System.Drawing.Point(18, 14);
+            this.PictureBoxPhoto.Name = "PictureBoxPhoto";
+            this.PictureBoxPhoto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PictureBoxPhoto.Size = new System.Drawing.Size(120, 120);
+            this.PictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBoxPhoto.TabIndex = 38;
+            this.PictureBoxPhoto.TabStop = false;
+            // 
             // Chat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,15 +296,15 @@
             this.PanelStatusClient.ResumeLayout(false);
             this.PanelStatusClient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxArrowBack)).EndInit();
-            this.CircleProgressBarStatus2.ResumeLayout(false);
-            this.CircleProgressBarStatus.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPhoto)).EndInit();
             this.PanelInfChat.ResumeLayout(false);
             this.PanelInfChat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxClient)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxSend)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.CircleProgressBarStatus.ResumeLayout(false);
+            this.CircleProgressBarStatus2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,9 +313,6 @@
         private Guna.UI2.WinForms.Guna2Panel PanelStatusClient;
         private Guna.UI2.WinForms.Guna2CirclePictureBox PictureBoxArrowBack;
         private System.Windows.Forms.TextBox textBoxUsername;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBarStatus2;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBarStatus;
-        private Guna.UI2.WinForms.Guna2PictureBox PictureBoxPhoto;
         private Guna.UI2.WinForms.Guna2Panel PanelInfChat;
         private System.Windows.Forms.TextBox textBoxNameClient;
         private Guna.UI2.WinForms.Guna2CirclePictureBox PictureBoxClient;
@@ -327,5 +321,8 @@
         private Guna.UI2.WinForms.Guna2TextBox textBoxMessageChat;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.ListBox listBoxChat;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBarStatus;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar CircleProgressBarStatus2;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox PictureBoxPhoto;
     }
 }
