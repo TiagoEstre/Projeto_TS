@@ -1,0 +1,27 @@
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v2\Projeto_TS\Server\bin\Debug\Server.exe.config
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v2\Projeto_TS\Server\bin\Debug\Server.exe
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v2\Projeto_TS\Server\bin\Debug\Server.pdb
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v2\Projeto_TS\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v2\Projeto_TS\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v2\Projeto_TS\Server\obj\Debug\Server.exe
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v2\Projeto_TS\Server\obj\Debug\Server.pdb
+C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v3\Projeto_TS\Server\bin\Debug\Server.exe.config
+C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v3\Projeto_TS\Server\bin\Debug\Server.exe
+C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v3\Projeto_TS\Server\bin\Debug\Server.pdb
+C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v3\Projeto_TS\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v3\Projeto_TS\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v3\Projeto_TS\Server\obj\Debug\Server.exe
+C:\Users\tiago\Documents\IPL\2 - Semestre\Projetos\TS - Topicos de Seguranca\v3\Projeto_TS\Server\obj\Debug\Server.pdb
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\bin\Debug\Server.exe.config
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\bin\Debug\Server.exe
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\bin\Debug\Server.pdb
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\obj\Debug\Server.csproj.Up2Date
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\obj\Debug\Server.exe
+C:\Users\tiago\OneDrive - IPLeiria\Desktop\Projetos\TS - Topicos de Segurança\v3\Projeto_TS\Server\obj\Debug\Server.pdb
+C:\Users\ivano\OneDrive\2ºSemestre\TS\Projeto_nº2231439_nº2231437_nº2231448\Projeto_TS\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\ivano\OneDrive\2ºSemestre\TS\Projeto_nº2231439_nº2231437_nº2231448\Projeto_TS\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\ivano\OneDrive\2ºSemestre\TS\Projeto_nº2231439_nº2231437_nº2231448\Projeto_TS\Server\obj\Debug\Server.exe
+C:\Users\ivano\OneDrive\2ºSemestre\TS\Projeto_nº2231439_nº2231437_nº2231448\Projeto_TS\Server\obj\Debug\Server.pdb
